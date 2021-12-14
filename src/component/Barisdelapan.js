@@ -1,5 +1,4 @@
 import React from "react";
-import uidesign from '../image/fotocontoh.png';
 
 
 import Box from '@mui/material/Box';

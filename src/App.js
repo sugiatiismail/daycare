@@ -139,7 +139,7 @@ const App = () => {
               </Menu>
             </Box>
             <Button color="inherit" variant="text" >Login</Button>
-            <Button color="inherit" variant="contained" color="success">Sign-up</Button>
+            <Button  variant="contained" color="success">Sign-up</Button>
           </Toolbar>
         </Container>
       </AppBar>
