@@ -29,7 +29,8 @@ const Biyayapendaftaran = () => {
     return (
         <Box sx={{ backgroundColor: '#ffffff', padding: 10 }}>
             <Container fullWidth >
-                <Typography align="center" variant="h4" marginBottom={5}>Biaya Masuk Hasanah Islamic Daycare</Typography>
+            <Typography align="center" marginBottom={10} style={{ fontFamily: 'sans-serif', fontWeight: 700 }}
+                    variant="h4">Biaya Masuk Daycare</Typography>
                 <Stack
                         component={Paper}
                         justifyContent="center"

@@ -8,7 +8,7 @@ import { Container } from "@mui/material";
 
 const Bawah = () => {
     return (
-        <Box sx={{ backgroundColor: '#ffffff', padding: 10 }}>
+        <Box sx={{ backgroundColor: '#f5f7fc', padding: 10 }}>
             <Container fullWidth >
                 <Grid container>
                     <Grid item xs={10}>

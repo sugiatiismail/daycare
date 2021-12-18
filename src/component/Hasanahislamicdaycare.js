@@ -11,18 +11,31 @@ import Button from '@mui/material/Button';
 import InputAdornment from '@mui/material/InputAdornment';
 import CheckIcon from '@mui/icons-material/Check';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import { makeStyles } from '@mui/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { createTheme } from '@mui/material/styles';
 
 const Hasanahislamicdaycare = () => {
+    const classes = useStyles();
+    const theme = createTheme();
+    const isDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+
+
     return (
-        <Box sx={{ backgroundColor: '#f5f7fc', padding: 6 }} marginTop={6} marginBottom={-8}>
+        <Box className={classes.boxOne}
+        // sx={{ backgroundColor: '#f5f7fc', padding: 6, height: 600 }} marginTop={6} 
+        >
             <Container >
                 <Grid container spacing={2} marginTop={4} justifyContent="center" alignItems="center" >
-                    < Grid item xs={7}   >
+
+                    <Grid item lg={7} md={7} sm={12} xs={12}>
                         <Stack spacing={2}>
-                            <Typography style={{fontFamily: 'sans-serif',fontWeight: 700}} variant="h3">Hasanah Islamic Daycare</Typography>
+                            <Typography className={classes.title1} >Hasanah Islamic Daycare</Typography>
                             <Typography variant="h5" >Mengasihi, Menyayangi, Sepenuh Hati</Typography>
-                            <Stack direction="row" spacing={0.3}>
-                                <TextField id="filled-basic" sx={{ width: 370 }} placeholder="Enter Your Email Adress" variant="standard" InputProps={{
+                            <Stack direction={isDesktop ? 'row' : 'column'} spacing={0.3}>
+                                <TextField id="filled-basic" 
+                                // sx={{ width: 370 }} 
+                                placeholder="Enter Your Email Adress" variant="standard" InputProps={{
                                     startAdornment: (
                                         <InputAdornment position="start">
                                             <MailOutlineIcon />
@@ -42,12 +55,12 @@ const Hasanahislamicdaycare = () => {
                                     <Typography variant='body2'> Bermain Sambil Belajar </Typography>
                                 </Box>
                             </Stack>
-
                         </Stack>
 
                     </Grid>
-                    <Grid item xs={5}>
-                        <img src={salwa} className="App-logo" alt="salwa"  style={{ marginLeft:-80,height: 450 }} />
+
+                    <Grid item lg={5} md={5} sm={12} xs={12}>
+                        <img src={salwa} alt="salwa"className={classes.image} />
                     </Grid>
                 </Grid>
             </Container>
@@ -56,3 +69,48 @@ const Hasanahislamicdaycare = () => {
 }
 
 export default Hasanahislamicdaycare
+
+
+const useStyles = makeStyles(theme => ({
+
+    boxOne: {
+        backgroundColor: '#f5f7fc',
+
+        [theme.breakpoints.up('sm')]: {
+            padding: 10,
+            height: 700
+        },
+
+        [theme.breakpoints.down('sm')]: {
+            paddingTop: 20,
+            padding: 10
+        },
+    },
+
+    image: {
+        marginTop: 40,
+        [theme.breakpoints.up('sm')]: {
+          height: 400
+        },
+        [theme.breakpoints.down('sm')]: {
+            height: 250,
+            marginTop: -10
+          },
+        },
+
+        title1: {
+            fontFamily: 'sans-serif',
+            fontWeight: 700,
+            color: '#212121',
+            fontSize: 43,
+            [theme.breakpoints.up('sm')]: {
+                lineHeight: 1.5
+            },
+            [theme.breakpoints.down('sm')]: {
+                lineHeight: 1.3
+
+              },
+            }
+
+}));
+

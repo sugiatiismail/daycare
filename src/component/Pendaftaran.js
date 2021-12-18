@@ -17,15 +17,33 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CreateIcon from '@mui/icons-material/Create';
 import IconButton from '@mui/material/IconButton';
 
-const Pendaftaran = () => {
+
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+
+import {
+    createTheme,
+    ThemeProvider,
+} from '@mui/material/styles';
+
+
+function Pendaftaran() {
+
+   // const classes = useStyles();
+    const theme = createTheme();
+    const isDesktop = useMediaQuery(theme.breakpoints.up('sm'));
+
+
+
     return (
-        <Box sx={{ backgroundColor: '#f5f7fc', padding: 10 }}>
+        <Box sx={{ backgroundColor: '#ffffff', padding: 10 }}>
             <Container fullWidth>
-                <Typography align="center" variant="h4" marginBottom={10}>Pendaftaran</Typography>
+            <ThemeProvider theme={theme}>
+                <Typography align="center" marginBottom={10} style={{ fontFamily: 'sans-serif', fontWeight: 700, color: '#071e55' }} variant="h4">Pendaftaran</Typography>
                 <Grid container spacing={8} justifyContent="center" alignItems="center">
-                    < Grid item xs={6}   >
+                    <Grid item lg={6} md={6} xs={12} xm={12}>
                         <Stack spacing={2}>
-                            <Typography variant="h4">Cara Mendaftar</Typography>
+                            <Typography align="center" marginLeft={isDesktop ? -46 : -0.5} style={{ fontFamily: 'sans-serif', fontWeight: 600, color: '#071e55' }} variant={isDesktop ? 'h5' : 'h6'}>Cara Mendaftar</Typography>
                             <Typography variant="body2" >Untuk mendaftarkan peserta didik bisa melalui online atau pun langsung datang ke Hasanah Islamic Daycare</Typography>
                             <Stack
                                 direction="row"
@@ -56,7 +74,7 @@ const Pendaftaran = () => {
 
                         </Stack>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item lg={6} md={6} xs={12} xm={12}>
                         <Accordion>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
@@ -128,6 +146,7 @@ const Pendaftaran = () => {
                         </Accordion>
                     </Grid>
                 </Grid>
+                </ThemeProvider>
             </Container>
         </Box >
     )
