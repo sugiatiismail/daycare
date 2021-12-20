@@ -29,123 +29,123 @@ import {
 
 function Pendaftaran() {
 
-   // const classes = useStyles();
+    // const classes = useStyles();
     const theme = createTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
 
 
     return (
-        <Box sx={{ backgroundColor: '#ffffff', padding: 10 }}>
+        <Box sx={{ backgroundColor: '#ffffff'}} padding={isDesktop ? 10 : 1}>
             <Container fullWidth>
-            <ThemeProvider theme={theme}>
-                <Typography align="center" marginBottom={10} style={{ fontFamily: 'sans-serif', fontWeight: 700, color: '#071e55' }} variant="h4">Pendaftaran</Typography>
-                <Grid container spacing={8} justifyContent="center" alignItems="center">
-                    <Grid item lg={6} md={6} xs={12} xm={12}>
-                        <Stack spacing={2}>
-                            <Typography align="center" marginLeft={isDesktop ? -46 : -0.5} style={{ fontFamily: 'sans-serif', fontWeight: 600, color: '#071e55' }} variant={isDesktop ? 'h5' : 'h6'}>Cara Mendaftar</Typography>
-                            <Typography variant="body2" >Untuk mendaftarkan peserta didik bisa melalui online atau pun langsung datang ke Hasanah Islamic Daycare</Typography>
-                            <Stack
-                                direction="row"
-                                divider={<Divider orientation="vertical" flexItem />}
-                                spacing={2}
-                            >
-                                <Stack>
-                                    <Typography variant="h5" color="initial">Online</Typography>
-                                    <Stack direction="row">
-                                        <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
-                                        <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
-                                        <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
-                                        <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
-                                        <StarHalfIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
+                <ThemeProvider theme={theme}>
+                    <Typography align="center" marginBottom={isDesktop ? 10 : 6} marginTop={isDesktop ? 0 : 6} style={{ fontFamily: 'sans-serif', color: '#071e55' }} fontWeight={isDesktop ? 700 : 650} variant={isDesktop ? 'h4' : 'h5'}>Pendaftaran</Typography>
+                    <Grid container spacing={8} justifyContent="center" alignItems="center">
+                        <Grid item lg={6} md={6} xs={12} xm={12}>
+                            <Stack spacing={2}>
+                                <Typography align="center" style={{ fontFamily: 'sans-serif', fontWeight: 600, color: '#071e55' }} variant={isDesktop ? 'h5' : 'h6'}>Cara Mendaftar</Typography>
+                                <Typography variant="body2" >Untuk mendaftarkan peserta didik bisa melalui online atau pun langsung datang ke Hasanah Islamic Daycare</Typography>
+                                <Stack
+                                    direction="row"
+                                    divider={<Divider orientation="vertical" flexItem />}
+                                    spacing={2}
+                                >
+                                    <Stack>
+                                        <Typography variant="h5" color="initial">Online</Typography>
+                                        <Stack direction="row">
+                                            <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
+                                            <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
+                                            <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
+                                            <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
+                                            <StarHalfIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
+                                        </Stack>
+                                    </Stack>
+                                    <Stack>
+                                        <Typography variant="h5" color="initial">Offline</Typography>
+                                        <Stack direction="row">
+                                            <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
+                                            <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
+                                            <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
+                                            <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
+                                            <StarOutlineIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
+                                        </Stack>
                                     </Stack>
                                 </Stack>
-                                <Stack>
-                                    <Typography variant="h5" color="initial">Offline</Typography>
-                                    <Stack direction="row">
-                                        <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
-                                        <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
-                                        <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
-                                        <StarIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
-                                        <StarOutlineIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="warning" />
-                                    </Stack>
-                                </Stack>
-                            </Stack>
 
-                        </Stack>
+                            </Stack>
+                        </Grid>
+                        <Grid item lg={6} md={6} xs={12} xm={12}>
+                            <Accordion>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <IconButton sx={{ border: 1, marginRight: 1 }} color="primary" aria-label="upload picture" component="span">
+                                        <CreateIcon />
+                                    </IconButton>
+                                    <Typography variant="h6">Langkah Mendaftar</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        1. Hubungi contact person
+                                    </Typography>
+                                    <Typography>
+                                        2. Mengambil formulir
+                                    </Typography>
+                                    <Typography>
+                                        3. Mengisi dan mengembalikan formulir
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                            <Accordion>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel2a-content"
+                                    id="panel2a-header"
+                                >
+                                    <IconButton sx={{ border: 1, marginRight: 1 }} color="primary" aria-label="upload picture" component="span">
+                                        <CreateIcon />
+                                    </IconButton>
+                                    <Typography variant="h6">Persyaratan</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        1. Membayar uang pendaftaran 100.000
+                                    </Typography>
+                                    <Typography>
+                                        2. Fotokopi akte kelahiran 3 lbr
+                                    </Typography>
+                                    <Typography>
+                                        3. Fotokopi KK 3 lbr
+                                    </Typography>
+                                    <Typography>
+                                        4. Fotokopu kartu BPJS 3 lbr
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                            <Accordion>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <IconButton sx={{ border: 1, marginRight: 1 }} color="primary" aria-label="upload picture" component="span">
+                                        <CreateIcon />
+                                    </IconButton>
+                                    <Typography variant="h6">Kontak Kami</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        HP : 082387822696
+                                    </Typography>
+                                    <Typography>
+                                        Alamat: Jl.pertanian no 30, Jayamukti. Dumai
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </Grid>
                     </Grid>
-                    <Grid item lg={6} md={6} xs={12} xm={12}>
-                        <Accordion>
-                            <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel1a-content"
-                                id="panel1a-header"
-                            >
-                                <IconButton sx={{ border: 1, marginRight: 1 }} color="primary" aria-label="upload picture" component="span">
-                                    <CreateIcon />
-                                </IconButton>
-                                <Typography variant="h6">Langkah Mendaftar</Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    1. Hubungi contact person
-                                </Typography>
-                                <Typography>
-                                    2. Mengambil formulir
-                                </Typography>
-                                <Typography>
-                                    3. Mengisi dan mengembalikan formulir
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion>
-                            <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel2a-content"
-                                id="panel2a-header"
-                            >
-                                <IconButton sx={{ border: 1, marginRight: 1 }} color="primary" aria-label="upload picture" component="span">
-                                    <CreateIcon />
-                                </IconButton>
-                                <Typography variant="h6">Persyaratan</Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    1. Membayar uang pendaftaran 100.000
-                                </Typography>
-                                <Typography>
-                                    2. Fotokopi akte kelahiran 3 lbr
-                                </Typography>
-                                <Typography>
-                                    3. Fotokopi KK 3 lbr
-                                </Typography>
-                                <Typography>
-                                    4. Fotokopu kartu BPJS 3 lbr
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                        <Accordion>
-                            <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel1a-content"
-                                id="panel1a-header"
-                            >
-                                <IconButton sx={{ border: 1, marginRight: 1 }} color="primary" aria-label="upload picture" component="span">
-                                    <CreateIcon />
-                                </IconButton>
-                                <Typography variant="h6">Kontak Kami</Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <Typography>
-                                    HP : 082387822696
-                                </Typography>
-                                <Typography>
-                                    Alamat: Jl.pertanian no 30, Jayamukti. Dumai
-                                </Typography>
-                            </AccordionDetails>
-                        </Accordion>
-                    </Grid>
-                </Grid>
                 </ThemeProvider>
             </Container>
         </Box >

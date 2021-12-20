@@ -30,9 +30,9 @@ const Programunggulan = () => {
     return (
 
         <Box className={classes.box1}>
-            <Container>
-                <Typography align='center' fontFamily='sans-serif' color='#071e55' fontWeight={isDesktop ? 700 : 650} variant={isDesktop ? 'h4' : 'h5'}>Program Unggulan</Typography>
-                <Grid container spacing={2} marginTop={isDesktop ? 10 : 2} justifyContent="center" alignItems="center" >
+            <Container padding={2}>
+                <Typography marginTop={10} align='center' fontFamily='sans-serif' color='#071e55' fontWeight={isDesktop ? 700 : 650} variant={isDesktop ? 'h4' : 'h5'}>Program Unggulan</Typography>
+                <Grid container spacing={2} marginTop={isDesktop ? 10 : 7} justifyContent="center" alignItems="center" >
 
                     <Grid item lg={6} md={6} xs={12} xm={12}>
                         <Stack
@@ -40,8 +40,7 @@ const Programunggulan = () => {
                             justifyContent="center"
                             alignItems="center"
                             spacing={2}
-                            p={3}
-                            height={isDesktop ? 647 : 700}
+                            p={isDesktop ? 3 : 2}
                             // height={647}
                             elevation={3}
                         >
@@ -126,11 +125,11 @@ const Programunggulan = () => {
                             justifyContent="center"
                             alignItems="center"
                             spacing={2}
-                            p={3}
+                            p={isDesktop ? 3 : 2}
                             // height={647}
                             elevation={3}
                         >
-                            <img src={baby2} alt="baby2" className={classes.image2} />
+                            <img src={baby2} alt="baby2" className={classes.image1} />
                             <Typography align="center" variant="h6">Toodle Fullday usia 1 tahun - 5  tahun</Typography>
                             <Stack marginBottom={2} spacing={1}>
 
@@ -161,23 +160,15 @@ const Programunggulan = () => {
 
                                 <Box display='flex' alignItems='center'>
                                     <ChildCareTwoToneIcon color="success" />
-                                    <Typography marginLeft={1} variant='body1'> 09:30 s.d 10.30 :	Sensory play </Typography>
+                                    <Typography marginLeft={1} variant='body1'> 09:30 s.d 11.00 :	Sensory play dan bersih bersih </Typography>
                                 </Box>
+
 
                                 <Box display='flex' alignItems='center'>
                                     <ChildCareTwoToneIcon color="success" />
-                                    <Typography marginLeft={1} variant='body1'> 10:30 s.d 11.00 :	Bersih bersih </Typography>
+                                    <Typography marginLeft={1} variant='body1'> 11:00 s.d 11.15 :	Sholat dhuha dan tidur siang </Typography>
                                 </Box>
 
-                                <Box display='flex' alignItems='center'>
-                                    <ChildCareTwoToneIcon color="success" />
-                                    <Typography marginLeft={1} variant='body1'> 11:00 s.d 11.15 :	Sholat dhuha </Typography>
-                                </Box>
-
-                                <Box display='flex' alignItems='center'>
-                                    <ChildCareTwoToneIcon color="success" />
-                                    <Typography marginLeft={1} variant='body1'>11:15 s.d 12.30	 : Tidur siang</Typography>
-                                </Box>
 
                                 <Box display='flex' alignItems='center'>
                                     <ChildCareTwoToneIcon color="success" />
@@ -186,12 +177,7 @@ const Programunggulan = () => {
 
                                 <Box display='flex' alignItems='center'>
                                     <ChildCareTwoToneIcon color="success" />
-                                    <Typography marginLeft={1} variant='body1'> 13:00 s.d 13:30 :	Makan siang </Typography>
-                                </Box>
-
-                                <Box display='flex' alignItems='center'>
-                                    <ChildCareTwoToneIcon color="success" />
-                                    <Typography marginLeft={1} variant='body1'>13:30 s.d 14:30 :	Bermain bebas</Typography>
+                                    <Typography marginLeft={1} variant='body1'> 13:00 s.d 13:30 :	Makan siang dan bermain bebas </Typography>
                                 </Box>
 
                                 <Box display='flex' alignItems='center'>
@@ -232,6 +218,7 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: '#fff',
         [theme.breakpoints.up('sm')]: {
             padding: 10
+
         },
         [theme.breakpoints.down('sm')]: {
             padding: 2
@@ -250,16 +237,6 @@ const useStyles = makeStyles(theme => ({
         },
     },
 
-
-    image2: {
-        [theme.breakpoints.up('sm')]: {
-            marginTop: -3,
-            height: 80
-        },
-        [theme.breakpoints.down('sm')]: {
-            height: 40
-        },
-    },
 
 
 

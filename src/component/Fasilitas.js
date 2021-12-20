@@ -25,9 +25,9 @@ const Fasilitas = () => {
     const isDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
     return (
-        <Box sx={{ backgroundColor: '#f5f7fc', padding: 10, marginBottom: -12 }}>
+        <Box sx={{ backgroundColor: '#f5f7fc'}} padding={isDesktop ? 10 : 2} marginTop={isDesktop ? 14 : 10}  paddingBottom={isDesktop ? 0 : 10} >
             <Container fullWidth >
-                <Typography align="center" marginBottom={10} style={{ fontFamily: 'sans-serif', color: '#071e55' }} fontWeight={isDesktop ? 700 : 650} variant={isDesktop ? 'h4' : 'h5'}>Fasilitas</Typography>
+                <Typography align="center" marginBottom={isDesktop ? 10 : 6}  marginTop={isDesktop ? 4 : 6} style={{ fontFamily: 'sans-serif', color: '#071e55' }} fontWeight={isDesktop ? 700 : 650} variant={isDesktop ? 'h4' : 'h5'}>Fasilitas</Typography>
                 <Grid container>
                     <Grid item lg={7} md={7} sm={12} xs={12}>
 

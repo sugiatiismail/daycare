@@ -83,7 +83,8 @@ const useStyles = makeStyles(theme => ({
 
         [theme.breakpoints.down('sm')]: {
             paddingTop: 20,
-            padding: 10
+            padding: 1,
+            height: 750
         },
     },
 

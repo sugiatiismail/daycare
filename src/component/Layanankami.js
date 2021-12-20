@@ -29,42 +29,38 @@ function Layanankami() {
     const isDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
     return (
-        <Box className={classes.box1}>
-            <Container>
+        <Box sx={{ backgroundColor: '#f5f7fc'}} padding={isDesktop ? 2 : 2}  marginBottom={isDesktop ? 4 :2}  paddingBottom={isDesktop ? 16 :10}>
+            <Container >
                 <ThemeProvider theme={theme}>
-                    <Typography align="center" marginBottom={10} marginTop={10} style={{ color: '#071e55', fontFamily: 'sans-serif' }}
+                    <Typography align="center" marginBottom={isDesktop ? 10 : 6}  marginTop={isDesktop ? 6 : -1} style={{ color: '#071e55', fontFamily: 'sans-serif' }}
                         fontWeight={isDesktop ? 700 : 650} variant={isDesktop ? 'h4' : 'h5'}>Layanan Kami</Typography>
+                    <Grid container  justifyContent="center" alignItems="center">
+                        <Grid item lg={6} md={6} xs={12} xm={12}>
+                            <Stack
+                                p={3}
+                                elevation={3}
+                                justifyContent="center"
+                                alignItems="center"
+                            >
+                                <Paper className={classes.paper}  sx={{p:2}} >         
+                                <img src={packagedaycare} alt="packagedaycare" className={classes.image} />
+                                </Paper>
+                            </Stack>
+                        </Grid>
+                        <Grid item lg={6} md={6} xs={12} xm={12}>
+                            <Stack
+                                p={3}
+                                elevation={3}
+                                justifyContent="center"
+                                alignItems="center"
+                            >
+                                <Paper className={classes.paper}  sx={{p:2}} >  
+                                <img src={paruhwaktu} alt="paruhwaktu" className={classes.image} />
+                                </Paper>
+                            </Stack>
+                        </Grid>
+                    </Grid >
                 </ThemeProvider>
-                <Grid container spacing={4} justifyContent="center" alignItems="center" >
-                    <Grid item lg={6} md={6} xs={12} xm={12}>
-                        <Stack
-                            component={Paper}
-                            justifyContent="center"
-                            alignItems="center"
-                            width={isDesktop ? 525 : 200}
-                            marginLeft={isDesktop ? 0 : 3.5}
-                            spacing={2}
-                            p={3}
-                            elevation={3}
-                        >
-                            <img src={packagedaycare} alt="packagedaycare" className={classes.image} />
-                        </Stack>
-                    </Grid>
-                    <Grid item lg={6} md={6} xs={12} xm={12}>
-                        <Stack
-                            component={Paper}
-                            justifyContent="center"
-                            alignItems="center"
-                            marginLeft={isDesktop ? 0 : 3.5}
-                            width={isDesktop ? 525 : 200}
-                            spacing={2}
-                            p={3}
-                            elevation={3}
-                        >
-                            <img src={paruhwaktu} alt="paruhwaktu" className={classes.image} />
-                        </Stack>
-                    </Grid>
-                </Grid >
             </Container>
         </Box >
 
@@ -78,16 +74,6 @@ export default Layanankami
 
 const useStyles = makeStyles(theme => ({
 
-    box1: {
-        backgroundColor: '#f5f7fc',
-        [theme.breakpoints.up('sm')]: {
-            padding: 10
-        },
-        [theme.breakpoints.down('sm')]: {
-            padding: 2
-        },
-    },
-
     image: {
         [theme.breakpoints.up('sm')]: {
             height: 450
@@ -97,4 +83,17 @@ const useStyles = makeStyles(theme => ({
         },
     },
 
+    paper: {
+        [theme.breakpoints.up('sm')]: {
+            height: 450,
+            width: 450
+        },
+        [theme.breakpoints.down('sm')]: {
+            height: 220,
+            width : 220
+        },
+    },
+
+
 }));
+
