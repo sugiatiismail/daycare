@@ -7,9 +7,9 @@ import Programunggulan from "./component/Programunggulan"
 import Fasilitas from "./component/Fasilitas"
 import Layanankami from './component/Layanankami';
 import Pendaftaran from './component/Pendaftaran';
-import Biayapendaftaran2 from './component/Biayapendaftaran2';
-import Kirimmasukkan from './component/Kirimmasukkan';
-import Bawah from './component/Bawah';
+// import Biayapendaftaran2 from './component/Biayapendaftaran2';
+// import Kirimmasukkan from './component/Kirimmasukkan';
+// import Bawah from './component/Bawah';
 
 
 
