@@ -143,9 +143,9 @@ const App = () => {
       <Fasilitas />
       <Layanankami />
       <Pendaftaran />
-       <Biayapendaftaran2 />
+       {/* <Biayapendaftaran2 />
       <Kirimmasukkan />
-      <Bawah />
+      <Bawah /> */}
 
     </div>
 
