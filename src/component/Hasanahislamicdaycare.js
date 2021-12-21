@@ -33,18 +33,18 @@ const Hasanahislamicdaycare = () => {
                             <Typography className={classes.title1} >Hasanah Islamic Daycare</Typography>
                             <Typography variant="h5" >Mengasihi, Menyayangi, Sepenuh Hati</Typography>
                             <Stack direction={isDesktop ? 'row' : 'column'} spacing={0.3}>
-                                <TextField id="filled-basic" 
-                                // sx={{ width: 370 }} 
-                                placeholder="Enter Your Email Adress" variant="standard" InputProps={{
-                                    startAdornment: (
-                                        <InputAdornment position="start">
-                                            <MailOutlineIcon />
-                                        </InputAdornment>
-                                    ),
-                                }} />
+                                <TextField id="filled-basic"
+                                    // sx={{ width: 370 }} 
+                                    placeholder="Masukkan Alamat Email" variant="outlined" sx={{backgroundColor:"#ffffff"}} InputProps={{
+                                        startAdornment: (
+                                            <InputAdornment position="start">
+                                                <MailOutlineIcon />
+                                            </InputAdornment>
+                                        ),
+                                    }} />
                                 <Button color="error" variant="contained">Daftar Sekarang</Button>
                             </Stack>
-                            <Stack direction="row" spacing={1}>
+                            <Stack direction={isDesktop ? 'row' : 'column'} spacing={1}>
                                 <Box display='flex' alignItems='center'>
                                     <CheckIcon sx={{ fontSize: 18, marginRight: 0.5 }} color="primary" />
                                     <Typography variant='body2'> Penitipan Anak Berbasis Islami </Typography>
@@ -60,7 +60,7 @@ const Hasanahislamicdaycare = () => {
                     </Grid>
 
                     <Grid item lg={5} md={5} sm={12} xs={12}>
-                        <img src={salwa} alt="salwa"className={classes.image} />
+                        <img src={salwa} alt="salwa" className={classes.image} />
                     </Grid>
                 </Grid>
             </Container>
@@ -91,27 +91,27 @@ const useStyles = makeStyles(theme => ({
     image: {
         marginTop: 40,
         [theme.breakpoints.up('sm')]: {
-          height: 400
+            height: 400
         },
         [theme.breakpoints.down('sm')]: {
-            height: 250,
+            height: 260,
             marginTop: -10
-          },
         },
+    },
 
-        title1: {
-            fontFamily: 'sans-serif',
-            fontWeight: 700,
-            color: '#212121',
-            fontSize: 43,
-            [theme.breakpoints.up('sm')]: {
-                lineHeight: 1.5
-            },
-            [theme.breakpoints.down('sm')]: {
-                lineHeight: 1.3
+    title1: {
+        fontFamily: 'sans-serif',
+        fontWeight: 700,
+        color: '#212121',
+        fontSize: 43,
+        [theme.breakpoints.up('sm')]: {
+            lineHeight: 1.5
+        },
+        [theme.breakpoints.down('sm')]: {
+            lineHeight: 1.3
 
-              },
-            }
+        },
+    }
 
 }));
 

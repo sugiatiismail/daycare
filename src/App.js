@@ -7,12 +7,13 @@ import Programunggulan from "./component/Programunggulan"
 import Fasilitas from "./component/Fasilitas"
 import Layanankami from './component/Layanankami';
 import Pendaftaran from './component/Pendaftaran';
-// import Biayapendaftaran2 from './component/Biayapendaftaran2';
-// import Kirimmasukkan from './component/Kirimmasukkan';
-// import Bawah from './component/Bawah';
+import Biayapendaftaran2 from './component/Biayapendaftaran2';
+import Kirimmasukkan from './component/Kirimmasukkan';
+import Bawah from './component/Bawah';
 
 
-
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { createTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -31,6 +32,8 @@ const pages = ['Beranda', 'Program', 'Galeri', 'Tim Kami', 'Tentang', 'Kontak'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const App = () => {
+  const theme = createTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up('sm'));
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -52,7 +55,18 @@ const App = () => {
       <AppBar color='inherit' >
         <Container maxWidth="lg">
           <Toolbar disableGutters>
-            <img src={hasanah} alt="hasanah" style={{ height: 40 }} />
+            {/* {isDesktop &&
+             <img src={hasanah} alt="hasanah" style={{ height: 40}} />
+            } */}
+
+            {isDesktop ?
+              <img src={hasanah} alt="hasanah" style={{ height: 40 }} />
+              :
+              <></>
+            }
+
+            {/* <img src={hasanah} alt="hasanah" style={{ height: 40, display: isDesktop? 'block' : 'none', visibility: isDesktop? 'visible' : 'hidden' }} /> */}
+
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
@@ -88,7 +102,9 @@ const App = () => {
                   </MenuItem>
                 ))}
               </Menu>
+              <img src={hasanah} alt="hasanah" style={{ height: 40 }} />
             </Box>
+
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
                 <Button
@@ -143,9 +159,9 @@ const App = () => {
       <Fasilitas />
       <Layanankami />
       <Pendaftaran />
-       {/* <Biayapendaftaran2 />
-      <Kirimmasukkan />
-      <Bawah /> */}
+      <Biayapendaftaran2/>
+      <Kirimmasukkan /> 
+      <Bawah/>
 
     </div>
 

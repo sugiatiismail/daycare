@@ -31,7 +31,8 @@ const Programunggulan = () => {
 
         <Box className={classes.box1}>
             <Container padding={2}>
-                <Typography marginTop={10} align='center' fontFamily='sans-serif' color='#071e55' fontWeight={isDesktop ? 700 : 650} variant={isDesktop ? 'h4' : 'h5'}>Program Unggulan</Typography>
+                <Typography marginTop={10} align='center' fontFamily='sans-serif' color='#071e55' fontWeight={isDesktop ? 700 : 650} fontSize={isDesktop ? 35 : 32}
+                >Program Unggulan</Typography>
                 <Grid container spacing={2} marginTop={isDesktop ? 10 : 7} justifyContent="center" alignItems="center" >
 
                     <Grid item lg={6} md={6} xs={12} xm={12}>

@@ -27,8 +27,9 @@ const Fasilitas = () => {
     return (
         <Box sx={{ backgroundColor: '#f5f7fc'}} padding={isDesktop ? 10 : 2} marginTop={isDesktop ? 14 : 10}  paddingBottom={isDesktop ? 0 : 10} >
             <Container fullWidth >
-                <Typography align="center" marginBottom={isDesktop ? 10 : 6}  marginTop={isDesktop ? 4 : 6} style={{ fontFamily: 'sans-serif', color: '#071e55' }} fontWeight={isDesktop ? 700 : 650} variant={isDesktop ? 'h4' : 'h5'}>Fasilitas</Typography>
-                <Grid container>
+                <Typography align="center" marginBottom={isDesktop ? 10 : 6}  marginTop={isDesktop ? 4 : 6} style={{ fontFamily: 'sans-serif', color: '#071e55' }} fontWeight={isDesktop ? 700 : 650} fontSize={isDesktop ? 35 : 32}
+                >Fasilitas</Typography>
+                <Grid container spacing={6}>
                     <Grid item lg={7} md={7} sm={12} xs={12}>
 
                         <Stack marginBottom={2} spacing={1}>

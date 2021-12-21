@@ -36,10 +36,11 @@ function Pendaftaran() {
 
 
     return (
-        <Box sx={{ backgroundColor: '#ffffff'}} padding={isDesktop ? 10 : 1}>
+        <Box sx={{ backgroundColor: '#ffffff'}} padding={isDesktop ? 10 : 1} paddingBottom={20}>
             <Container fullWidth>
                 <ThemeProvider theme={theme}>
-                    <Typography align="center" marginBottom={isDesktop ? 10 : 6} marginTop={isDesktop ? 0 : 6} style={{ fontFamily: 'sans-serif', color: '#071e55' }} fontWeight={isDesktop ? 700 : 650} variant={isDesktop ? 'h4' : 'h5'}>Pendaftaran</Typography>
+                    <Typography align="center" marginBottom={isDesktop ? 10 : 6} marginTop={isDesktop ? 0 : 6} style={{ fontFamily: 'sans-serif', color: '#071e55' }} fontWeight={isDesktop ? 700 : 650} fontSize={isDesktop ? 35 : 32}
+                    >Pendaftaran</Typography>
                     <Grid container spacing={8} justifyContent="center" alignItems="center">
                         <Grid item lg={6} md={6} xs={12} xm={12}>
                             <Stack spacing={2}>

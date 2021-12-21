@@ -33,8 +33,8 @@ function Layanankami() {
             <Container >
                 <ThemeProvider theme={theme}>
                     <Typography align="center" marginBottom={isDesktop ? 10 : 6}  marginTop={isDesktop ? 6 : -1} style={{ color: '#071e55', fontFamily: 'sans-serif' }}
-                        fontWeight={isDesktop ? 700 : 650} variant={isDesktop ? 'h4' : 'h5'}>Layanan Kami</Typography>
-                    <Grid container  justifyContent="center" alignItems="center">
+                        fontWeight={isDesktop ? 700 : 650} fontSize={isDesktop ? 35 : 32}>Layanan Kami</Typography>
+                    <Grid container  justifyContent="center" alignItems="center" >
                         <Grid item lg={6} md={6} xs={12} xm={12}>
                             <Stack
                                 p={3}
@@ -79,7 +79,7 @@ const useStyles = makeStyles(theme => ({
             height: 450
         },
         [theme.breakpoints.down('sm')]: {
-            height: 220
+            height: 300
         },
     },
 
@@ -89,8 +89,8 @@ const useStyles = makeStyles(theme => ({
             width: 450
         },
         [theme.breakpoints.down('sm')]: {
-            height: 220,
-            width : 220
+            height: 300,
+            width : 300
         },
     },
 
