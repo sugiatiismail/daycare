@@ -16,7 +16,7 @@ const Biayapendaftaran2 = () => {
     const isDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
     return (
-        <Box sx={{ backgroundColor: '#f5f7fc', padding: 0 }}>
+        <Box sx={{ backgroundColor: '#f5f7fc', paddingBottom:isDesktop ? 18 : 6, paddingTop:isDesktop ? 8 : 8 }}>
             <Container fullWidth >
                 <Typography align="center" marginBottom={isDesktop ? 10 : 6} marginTop={isDesktop ? 6 : -1} style={{ color: '#071e55', fontFamily: 'sans-serif' }}
                     fontWeight={isDesktop ? 700 : 650} fontSize={isDesktop ? 35 : 32}>Biaya Masuk Daycare</Typography>

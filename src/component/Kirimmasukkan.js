@@ -26,94 +26,89 @@ const Kirimmasukkan = () => {
     const isDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
     return (
-        <Box sx={{ backgroundColor: '#ffffff', padding: isDesktop ? 10 : 2 }}>
-            <Container fullWidth >
-                <Grid container spacing={isDesktop ? 16 : 6} alignItems='center' justifyContent='center'>
-                    <Grid item lg={6} md={6} xs={12} xm={12} sx={{ spacing: 4 }}>
-                        <Stack spacing={2} alignItems='center' justifyContent='center'>
-                            <Typography align="center" marginLeft={isDesktop ? -50 : 0} style={{ fontFamily: 'sans-serif', fontWeight: 600, color: '#071e55' }} variant="h5">Kirim Masukan</Typography>
-                            <TextField
-                                component={Paper}
-                                alignItems='center'
-                                justifyContent='center'
-                                placeholder="Nama Lengkap"
-                                sx={{ width: isDesktop ? 560 : 340 }}
-                                multiline
-                                id="outlined-required"
-                            />
+        <Box sx={{ backgroundColor: 'ffffff', paddingTop:isDesktop ? 16 : 4, paddingBottom:isDesktop ? 16 : 8 }} >
+            <Container >
+                <Grid container spacing='2' justifyContent="center" alignItems="center">
+                    <Grid item lg={6} md={6} xs={12} xm={12}>
+                        <Stack spacing={2}>
+                            <Stack spacing={2} justifyContent='flex-start' alignItems='flex-start' >
+                                <Typography style={{ fontFamily: 'sans-serif', fontWeight: 600, color: '#071e55' }} variant="h5">Kirim Masukan</Typography>
+                                <TextField
+                                    component={Paper}
+                                    alignItems='center'
+                                    justifyContent='center'
+                                    placeholder="Nama Lengkap"
+                                    sx={{ width: isDesktop ? 550 : 310 }}
+                                    multiline
+                                    id="outlined-required"
+                                />
+                            </Stack>
                             <TextField
                                 component={Paper}
                                 placeholder="Alamat Email"
-                                sx={{ width: isDesktop ? 560 : 340 }}
+                                sx={{ width: isDesktop ? 550 : 310 }}
                                 multiline
                                 id="outlined-required"
                             />
                             <TextField
                                 component={Paper}
                                 placeholder="No HP"
-                                sx={{ width: isDesktop ? 560 : 340 }}
+                                sx={{ width: isDesktop ? 550 : 310 }}
                                 multiline
                                 id="outlined-required"
                             />
-                            <TextField
-                                component={Paper}
-                                id="outlined-multiline-static"
-                                placeholder="Isi Pesan..."
-                                multiline
-                                rows={9}
-                                sx={{ width: isDesktop ? 560 : 340 }}
-                            />
+                            <Stack spacing={2} justifyContent='flex-start' alignItems='flex-start'>
+                                <TextField
+                                    component={Paper}
+                                    id="outlined-multiline-static"
+                                    placeholder="Isi Pesan..."
+                                    multiline
+                                    rows={10}
+                                    sx={{ width: isDesktop ? 550 : 310 }}
+                                />
+                                <Button variant="contained" color="warning">
+                                    Kirim Masukan
+                                </Button>
+                            </Stack>
                         </Stack>
-                            <Button sx={{ marginTop: isDesktop ? 2 : 2, marginLeft: isDesktop ? -3 : -3.5 }} variant="contained" size="success">
-                                Kirim Masukan
-                            </Button>
                     </Grid>
 
                     <Grid item lg={6} md={6} xs={12} xm={12}>
-                        <Typography align="center" marginLeft={isDesktop ? -38 : 0} style={{ fontFamily: 'sans-serif', fontWeight: 600, color: '#071e55' }} variant={isDesktop ? 'h5' : 'h6'}>Lokasi Hasanah Islamic Daycare</Typography>
                         <Stack
-                            marginTop={2}
-                            marginLeft={isDesktop ? -6 : 0}
-                            marginBottom={2}
-                            justifyContent="center"
-                            alignItems="center"
                             spacing={2}
-                            p={3}
-                            height={isDesktop ? 250 : 120}
                             elevation={3}
                         >
+                            <Typography marginTop={isDesktop ? -6 : 4 } style={{ fontFamily: 'sans-serif', fontWeight: 600, color: '#071e55' }} variant={isDesktop ? 'h5' : 'h6'}>Lokasi Hasanah Islamic Daycare</Typography>
                             <Paper className={classes.paper} sx={{ p: 2 }} >
                                 <img src={map} alt="map" className={classes.image} />
                             </Paper>
-
-
-                        </Stack>
-                        <Typography marginBottom={2} marginLeft={isDesktop ? -6 : 0} variant="h6" color="initial">Alamat Daycare</Typography>
-                        <Stack spacing={1} marginLeft={isDesktop ? -6 : 0} marginBottom={-2}>
-                            <div style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                flexWrap: 'wrap',
-                            }}>
-                                <LocationOnIcon sx={{ color: '#1e90ff', fontSize: 19 }} />
-                                <Typography align="center" style={{ fontFamily: 'sans-serif', fontWeight: 400, fontSize: 17, marginLeft: 4 }} >Jl Pertanian No 10, Jaya Mukti</Typography>
-                            </div>
-                            <div style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                flexWrap: 'wrap',
-                            }}>
-                                <DraftsIcon sx={{ color: '#1e90ff', fontSize: 19 }} />
-                                <Typography align="center" style={{ fontFamily: 'sans-serif', fontWeight: 400, fontSize: 17, marginLeft: 5 }} >office@smart.co.uk</Typography>
-                            </div>
-                            <div style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                flexWrap: 'wrap',
-                            }}>
-                                <PhoneIcon sx={{ color: '#1e90ff', fontSize: 19 }} />
-                                <Typography paddingBottom={2} align="center" style={{ fontFamily: 'sans-serif', fontWeight: 400, fontSize: 16, marginLeft: 4 }} >+62 987 654 321</Typography>
-                            </div>
+                            <Stack spacing={1} justifyContent='flex-start' alignItems='flex-start' >
+                                <Typography marginBottom={2} marginTop={2} variant="h6" color="initial">Alamat Daycare</Typography>
+                                <div style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    flexWrap: 'wrap',
+                                }}>
+                                    <LocationOnIcon sx={{ color: '#1e90ff', fontSize: 19 }} />
+                                    <Typography align="center" style={{ fontFamily: 'sans-serif', fontWeight: 400, fontSize: 17, marginLeft: 4 }} >Jl Pertanian No 10, Jaya Mukti</Typography>
+                                </div>
+                                <div style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    flexWrap: 'wrap',
+                                }}>
+                                    <DraftsIcon sx={{ color: '#1e90ff', fontSize: 19 }} />
+                                    <Typography align="center" style={{ fontFamily: 'sans-serif', fontWeight: 400, fontSize: 17, marginLeft: 5 }} >office@smart.co.uk</Typography>
+                                </div>
+                                <div style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    flexWrap: 'wrap',
+                                }}>
+                                    <PhoneIcon sx={{ color: '#1e90ff', fontSize: 19 }} />
+                                    <Typography paddingBottom={2} align="center" style={{ fontFamily: 'sans-serif', fontWeight: 400, fontSize: 16, marginLeft: 4 }} >+62 987 654 321</Typography>
+                                </div>
+                            </Stack>
                         </Stack>
                     </Grid>
                 </Grid>
@@ -128,21 +123,21 @@ const useStyles = makeStyles(theme => ({
 
     image: {
         [theme.breakpoints.up('sm')]: {
-            height: 270
+            height: 260
         },
         [theme.breakpoints.down('sm')]: {
-            height: 140
+            height: 135
         },
     },
 
     paper: {
         [theme.breakpoints.up('sm')]: {
-            height: 280,
-            width: 570
+            height: 270,
+            width: 550
         },
         [theme.breakpoints.down('sm')]: {
-            height: 280,
-            width: 300
+            height: 150,
+            width: 280
         },
     },
 

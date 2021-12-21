@@ -36,7 +36,7 @@ function Pendaftaran() {
 
 
     return (
-        <Box sx={{ backgroundColor: '#ffffff'}} padding={isDesktop ? 10 : 1} paddingBottom={20}>
+        <Box sx={{ backgroundColor: '#ffffff'}} paddingTop={isDesktop ? 10 : 1} paddingBottom={isDesktop ? 18 : 10}>
             <Container fullWidth>
                 <ThemeProvider theme={theme}>
                     <Typography align="center" marginBottom={isDesktop ? 10 : 6} marginTop={isDesktop ? 0 : 6} style={{ fontFamily: 'sans-serif', color: '#071e55' }} fontWeight={isDesktop ? 700 : 650} fontSize={isDesktop ? 35 : 32}
