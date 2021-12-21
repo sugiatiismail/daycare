@@ -1,5 +1,5 @@
 import React from "react";
-import salwa from '../image/salwaa.png';
+import salwa from '../image/salwa.png';
 
 
 import Box from '@mui/material/Box';
@@ -22,12 +22,13 @@ const Hasanahislamicdaycare = () => {
 
 
     return (
-        <Box className={classes.boxOne}
+        <div className={classes.boxOne}
         // sx={{ backgroundColor: '#f5f7fc', padding: 6, height: 600 }} marginTop={6} 
         >
+
+          
             <Container >
                 <Grid container spacing={2} marginTop={4} justifyContent="center" alignItems="center" >
-
                     <Grid item lg={7} md={7} sm={12} xs={12}>
                         <Stack spacing={2}>
                             <Typography className={classes.title1} >Hasanah Islamic Daycare</Typography>
@@ -35,14 +36,14 @@ const Hasanahislamicdaycare = () => {
                             <Stack direction={isDesktop ? 'row' : 'column'} spacing={0.3}>
                                 <TextField id="filled-basic"
                                     // sx={{ width: 370 }} 
-                                    placeholder="Masukkan Alamat Email" variant="outlined" sx={{backgroundColor:"#ffffff"}} InputProps={{
+                                    placeholder="Masukkan Alamat Email" variant="outlined" sx={{ backgroundColor: "#ffffff" }} InputProps={{
                                         startAdornment: (
                                             <InputAdornment position="start">
                                                 <MailOutlineIcon />
                                             </InputAdornment>
                                         ),
                                     }} />
-                                <Button color="error" variant="contained">Daftar Sekarang</Button>
+                                <Button color="warning" variant="contained">Daftar Sekarang</Button>
                             </Stack>
                             <Stack direction={isDesktop ? 'row' : 'column'} spacing={1}>
                                 <Box display='flex' alignItems='center'>
@@ -64,7 +65,9 @@ const Hasanahislamicdaycare = () => {
                     </Grid>
                 </Grid>
             </Container>
-        </Box >
+
+
+        </div>
     )
 }
 
@@ -75,7 +78,6 @@ const useStyles = makeStyles(theme => ({
 
     boxOne: {
         backgroundColor: '#f5f7fc',
-
         [theme.breakpoints.up('sm')]: {
             padding: 10,
             height: 700

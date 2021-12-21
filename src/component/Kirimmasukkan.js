@@ -26,12 +26,12 @@ const Kirimmasukkan = () => {
     const isDesktop = useMediaQuery(theme.breakpoints.up('sm'));
 
     return (
-        <Box sx={{ backgroundColor: 'ffffff', paddingTop:isDesktop ? 16 : 4, paddingBottom:isDesktop ? 16 : 8 }} >
+        <Box sx={{ backgroundColor: 'ffffff', paddingTop: isDesktop ? 16 : 4, paddingBottom: isDesktop ? 16 : 8 }} >
             <Container >
                 <Grid container spacing='2' justifyContent="center" alignItems="center">
                     <Grid item lg={6} md={6} xs={12} xm={12}>
-                        <Stack spacing={2}>
-                            <Stack spacing={2} justifyContent='flex-start' alignItems='flex-start' >
+                        <Stack spacing={2} alignItems='center'>
+                            <Stack spacing={2} justifyContent='center' alignItems='flex-start' >
                                 <Typography style={{ fontFamily: 'sans-serif', fontWeight: 600, color: '#071e55' }} variant="h5">Kirim Masukan</Typography>
                                 <TextField
                                     component={Paper}
@@ -75,10 +75,11 @@ const Kirimmasukkan = () => {
 
                     <Grid item lg={6} md={6} xs={12} xm={12}>
                         <Stack
+                            alignItems='center'
                             spacing={2}
                             elevation={3}
                         >
-                            <Typography marginTop={isDesktop ? -6 : 4 } style={{ fontFamily: 'sans-serif', fontWeight: 600, color: '#071e55' }} variant={isDesktop ? 'h5' : 'h6'}>Lokasi Hasanah Islamic Daycare</Typography>
+                            <Typography marginTop={isDesktop ? -6 : 4} style={{ fontFamily: 'sans-serif', fontWeight: 600, color: '#071e55' }} variant={isDesktop ? 'h5' : 'h6'}>Lokasi Hasanah Islamic Daycare</Typography>
                             <Paper className={classes.paper} sx={{ p: 2 }} >
                                 <img src={map} alt="map" className={classes.image} />
                             </Paper>
