@@ -106,7 +106,7 @@ const Kirimmasukkan = () => {
                                     flexWrap: 'wrap',
                                 }}>
                                     <PhoneIcon sx={{ color: '#1e90ff', fontSize: 19 }} />
-                                    <Typography paddingBottom={2} align="center" style={{ fontFamily: 'sans-serif', fontWeight: 400, fontSize: 16, marginLeft: 4 }} >+62 987 654 321</Typography>
+                                    <Typography align="center" style={{ fontFamily: 'sans-serif', fontWeight: 400, fontSize: 17, marginLeft: 4 }} >+62 987 654 321</Typography>
                                 </div>
                             </Stack>
                         </Stack>
